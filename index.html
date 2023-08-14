@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>File-server</title>
+</head>
+
+<body>
+	<div class="center">
+		<h1 class="title">File Server</h1>
+		<a href="storage/">show files</a>
+	</div>
+	<div class="footer">
+		<footer>
+			<p>current time: </p>
+			<p id="time"></p>
+		</footer>
+	</div>
+</body>
+<script>
+	var timer = setInterval(setTime, 1000);
+
+	function setTime() {
+		const utc = new Date().toUTCString();
+		document.getElementById("time").innerHTML = utc;
+
+	}
+
+</script>
+<style>
+	.center {
+		text-align: center;
+	}
+
+	.title {
+		font-size: 200%;
+	}
+
+	.footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: black;
+		color: white;
+		text-align: center;
+	}
+</style>
+
+</html>
